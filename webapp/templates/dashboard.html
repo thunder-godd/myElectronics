@@ -1,0 +1,9 @@
+{% extends 'stafflayout.html' %} {% block side_nav %}
+<nav class="side-nav"><ul>
+<li><a href='adminDash'>Dashboard</a></li>
+{% block nav %}{%endblock nav%}
+<li><a href='/logout'>Logout<a/>
+</ul></nav>
+<section class="dash">{% block dash %}{% endblock dash %}</section>
+
+{% endblock side_nav %}

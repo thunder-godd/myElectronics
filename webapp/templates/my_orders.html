@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{%block body %}
+<table>
+  <thead>
+    <tr>
+      <th>Order id</th>
+      <th>product name</th>
+       <th>price</th>
+       <th>date ordered</th>
+       <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for order in orders %}
+    <tr>
+        <td>{{order.id}}</td>        
+        <td>{{order.product.name}}</td>
+        <td>{{order.product.price}}</td>
+        <td>{{order.date_ordered}}</td>
+        <td>{{order.delivered}}</td>
+    </tr>    
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock body %}

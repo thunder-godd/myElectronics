@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Webapp</title>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <h4>MyEletronics</h4>
+      <div class="searchbar">
+        <form method="GET">
+          <input type="search" name="search" id="search" />
+          <button class="btn search" type="submit">Search</button>
+        </form>
+      </div>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/customer_login">Login</a></li>
+        <li><a href="/sign_up">Sign Up</a></li>
+        <li><a href="/cart">Cart</a></li>
+      </ul>
+    </nav>
+
+    {% block body %}{% endblock %}
+    <footer class="main-footer">&copy;2021</footer>
+  </body>
+</html>

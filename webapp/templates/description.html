@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block body %}
+<div class="product">
+  <form method="POST" action="/addCart">
+    <div class="image">
+      <img src="image" alt="" />
+    </div>
+    <div class="description">
+      <p>{{product.name}}</p>
+      <p>{{product.price}}</p>
+      <input type="hidden" name="id" value="{{product.id}}" />
+    </div>
+    <button type="submit">Add to Cart</button>
+  </form>
+</div>
+
+{% endblock body %}

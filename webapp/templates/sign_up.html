@@ -1,0 +1,26 @@
+{%extends 'base.html'%} {% block head%}
+<title>Sign Up</title>
+{% endblock %} {% block body%}
+<h1>SIGNUP</h1>
+<form method="POST">
+  <label for="email">Email</label>
+  <input type="email" name="email" placeholder="Enter Email..." />
+  <label for="firstName">First Name</label>
+  <input type="text" name="firstName" placeholder="Enter First Name..." />
+  <label for="lastName">Last Name</label>
+  <input type="text" name="lastName" placeholder="Last Name..." />
+  <label for="password1">Password</label>
+  <input type="password" name="password1" placeholder="Enter Password..." />
+  <label for="password2">Password Again</label>
+  <input type="password" name="password2" placeholder="Confirm Password..." />
+  <label for='customer_type'>Select Customer Type</label>
+  <select name="type" id="">
+  <option value="Credit" selected >Regular Customer </option>
+  <option value="Contract">Contract Customer</option>
+  </select>
+  <label for='Card Number'>Card Number</label>
+  <input type='text' name='card_number'/>
+  <br />
+  <button type="submit">SUBMIT</button>
+</form>
+{%endblock%}

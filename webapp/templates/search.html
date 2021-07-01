@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block body %} {% for result in results %}
+<div class="product">
+  <a href="/description">
+    <div class="image">
+      <img src="image" alt="" />
+    </div>
+    <div class="description">
+      <p>name</p>
+      <p>price</p>
+    </div>
+  </a>
+</div>
+
+{% endfor %} {% endblock body %}

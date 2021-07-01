@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block body %} {% for product in Products %}
+<div class="product">
+  <form method="POST" action="/addCart">
+    <a href="/description/{{product.id}}">
+      <div class="image">
+        <img src="image" alt="" />
+      </div>
+      <div class="description">
+        <p>{{product.name}}</p>
+        <p>{{product.price}}</p>
+        <input type="hidden" name="id" value="{{product.id}}" />
+      </div>
+    </a>
+    <button type="submit">Add to Cart</button>
+  </form>
+</div>
+
+{% endfor %} {% endblock body %}

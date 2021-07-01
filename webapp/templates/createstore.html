@@ -1,0 +1,14 @@
+{% extends 'stafflayout.html' %}
+
+{% include '/partials/adminnav.html' %}
+ {% block form %}
+ <form action="" method="POST">
+<label for="">Location</label>
+<input type="text" name="location"  />
+<label for="">Stock_id</label>
+<input type="text" name="stock_id"  />
+
+
+<button type='submit'>SUBMIT</submit>
+</form>
+{% endblock form %}

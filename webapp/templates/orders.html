@@ -1,0 +1,30 @@
+{% extends 'stafflayout.html' %} {% include '/partials/adminnav.html' %} {%
+block body %}
+<table>
+  <thead>
+    <tr>
+      <th>Order id</th>
+      <th>Customer id</th>
+      <th>product name</th>
+      <th>date ordered</th>
+      <th>Delivered</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for order in Orders %}
+    <tr>
+        <td>{{order.id}}</td>
+        <td>{{order.customer.id}}</td>
+        <td>{{order.product.name}}</td>
+        <td>{{order.date_ordered}}</td>
+        <td>{{order.delivered}}</td>
+        <td><a href='/update_order/{{order.id}}'>Edit<a></td>
+        <td><a href='/delete_order/{{order.id}}'>Delete</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock body %}

@@ -1,0 +1,29 @@
+{% extends 'stafflayout.html' %} {% include '/partials/adminnav.html' %} {%
+block body %}
+<table>
+  <thead>
+    <tr>
+      <th>Warehouse id</th>
+      <th>Location</th>
+      <th>Stock_id</th>
+      <th>Manager</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for warehouse in Warehouses %}
+    <tr>
+    
+        <td>{{warehouse.id}}</td>
+        <td>{{warehouse.location}}</td>
+        <td><a href='/warehouse/{{warehouse.id}}'{{warehouse.stock_id}}</td>
+        <td>{{warehouse.Manager}}</td>
+        <td><a href='/update_warehouse/{{warehouse.id}}'>Edit<a></td>
+        <td><a href='/delete_warehouse/{{warehouse.id}}'>Delete</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock body %}
