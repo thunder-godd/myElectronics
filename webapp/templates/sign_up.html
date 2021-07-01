@@ -1,26 +1,44 @@
 {%extends 'base.html'%} {% block head%}
 <title>Sign Up</title>
 {% endblock %} {% block body%}
-<h1>SIGNUP</h1>
-<form method="POST">
-  <label for="email">Email</label>
-  <input type="email" name="email" placeholder="Enter Email..." />
-  <label for="firstName">First Name</label>
-  <input type="text" name="firstName" placeholder="Enter First Name..." />
-  <label for="lastName">Last Name</label>
-  <input type="text" name="lastName" placeholder="Last Name..." />
-  <label for="password1">Password</label>
-  <input type="password" name="password1" placeholder="Enter Password..." />
-  <label for="password2">Password Again</label>
-  <input type="password" name="password2" placeholder="Confirm Password..." />
-  <label for='customer_type'>Select Customer Type</label>
-  <select name="type" id="">
-  <option value="Credit" selected >Regular Customer </option>
-  <option value="Contract">Contract Customer</option>
-  </select>
-  <label for='Card Number'>Card Number</label>
-  <input type='text' name='card_number'/>
-  <br />
-  <button type="submit">SUBMIT</button>
+<h6>SIGNUP</h6>
+<form method="POST" class="row g-3">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" name='email' class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword1" class="form-label">Password</label>
+    <input type="password" name='password1' class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword1" class="form-label"> Confirm Password</label>
+    <input type="password" name='password2' class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label for="firstName" class="form-label">First Name</label>
+    <input type="text" name='firstName'class="form-control" id="firstName" >
+  </div>
+  <div class="col-12">
+    <label for="lastName" class="form-label">last Name</label>
+    <input type="text" name='lastName'class="form-control" id="lastName" >
+  </div>
+  <div class="col-md-4">
+    <label for="customer_type" class="form-label">Select Customer Type</label>
+    <select name='type'id="customer_type" class="form-select">
+      <option value="Credit" selected>Regular Customer</option>
+    <option value="Contract">Contract Customer</option>
+    </select>
+  </div>
+  <div class="col-12">
+    <label for="card_number" class="form-label">Card Number</label>
+    <input type="text" name='card_number'class="form-control" id="card_number" >
+  </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+  </div>
 </form>
+
 {%endblock%}

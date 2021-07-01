@@ -1,12 +1,27 @@
 {%extends 'base.html'%} {% block head%}
 <title>Login</title>
 {% endblock %} {% block body%}
-<h1>LOGIN</h1>
-<form action="" method="POST">
-  <label for="email">Email</label>
-  <input type="email" name="email" placeholder="Enter Email..." />
-  <label for="password">Password</label>
-  <input type="password" name="password" placeholder="Enter Password..." />
-  <button type="submit">SUBMIT</button>
+<h6>LOGIN</h6>
+
+<form method="POST">
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-5">
+      <input type="email" name="email" class="form-control" id="inputEmail3" />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-5">
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        id="inputPassword3"
+      />
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
 {%endblock%}

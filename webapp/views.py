@@ -1,6 +1,7 @@
 from flask import Blueprint,render_template,request,redirect,url_for,session,flash
 from  . import db
 from .models import Orders, Products,Manufacturers,Users,Call_center_staff,Customer_service_staff,Marketing_staff,Stocking_clerks,Managers,Stores,Warehouses,Customers,Contract_customers,Credit_customers
+from werkzeug.security import generate_password_hash
 import random
 views= Blueprint('views', __name__)
 #CUSTOMER VIEWS
@@ -83,12 +84,13 @@ def create_user():
         last_name = request.form.get('last_name')
         email = request.form.get('email')
         type = request.form.get('department')
+        password=request.form.get('password')
         user = Users.query.filter_by(email=email).first()
         if user:
             state=True
             #flash('Email already exists',category='error')
         else:
-            new_user=Users(email=email,first_name=first_name, last_name=last_name,type=type)
+            new_user=Users(email=email,first_name=first_name, last_name=last_name,type=type,password=generate_password_hash(password,method='sha256'))
             db.session.add(new_user)
               
             if type=='call_center':
